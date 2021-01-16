@@ -1,5 +1,3 @@
-
-
 import classes from './ProogressIndicator.module.css';
 
 const ProgressIndicator = props => {
@@ -8,25 +6,24 @@ const ProgressIndicator = props => {
             {
                 Object.keys(props.items).map((item, index) => {
                     let specialClass = '';
-                    if(index < props.currentFormNumber) {
+                    if (index < props.currentFormNumber) {
                         specialClass = classes['done'];
-                    }
-                    else if( index === props.currentFormNumber) {
+                    } else if (index === props.currentFormNumber) {
                         specialClass = classes['active'];
                     }
 
                     return (
                         <div className={classes.item} key={index}>
-                            <i 
+                            <i
                                 className={[props.items[item], specialClass].join(' ')}
-                                onClick={() =>props.updateFormNumber(index)}
-                                ></i>
+                                onClick={() => props.updateFormNumber(index)}
+                            />
                             <p>{item}</p>
                         </div>
                     )
                 })
             }
-                
+
         </div>
     );
 }

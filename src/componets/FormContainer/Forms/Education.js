@@ -1,5 +1,7 @@
 import { useState } from "react";
+import {classes} from "istanbul-lib-coverage";
 
+classes.formItem = undefined;
 const Education = ({classes,  ...props}) => {
     const [university, setUniversity] = useState('');
     const [degree, setDegree] = useState('');
@@ -17,7 +19,7 @@ const Education = ({classes,  ...props}) => {
                     value={university}
                     onChange={e => setUniversity(e.target.value)}
                 />
-                <label><i className="fas fa-university"></i><span>School/University</span></label>
+                <label><i className="fas fa-university"/><span>School/University</span></label>
             </div>
             <div className={classes.formItem}>
                 <input 
@@ -26,7 +28,7 @@ const Education = ({classes,  ...props}) => {
                     value={degree}
                     onChange={e => setDegree(e.target.value)}
                 />
-                <label><i className="fas fa-user-graduate"></i><span>Class/Degree</span></label>
+                <label><i className="fas fa-user-graduate"/><span>Class/Degree</span></label>
             </div>
             <div className={classes.formItem}>
                 <input 
@@ -35,7 +37,7 @@ const Education = ({classes,  ...props}) => {
                     value={startDate}
                     onChange={e => setStartDate(e.target.value)}
                 />
-                <label><i className="fas fa-calendar-alt"></i><span>Start</span></label>
+                <label><i className="fas fa-calendar-alt"/><span>Start</span></label>
             </div>
             <div className={classes.formItem}>
                 <input 
@@ -44,14 +46,14 @@ const Education = ({classes,  ...props}) => {
                     value={endDate}
                     onChange={e => setEndDate(e.target.value)}
                 />
-                <label><i className="fas fa-calendar-alt"></i><span>End</span></label>
+                <label><i className="fas fa-calendar-alt"/><span>End</span></label>
             </div>
             <button type="submit" onClick={() => props.onProgress({
                 university,
                 degree,
                 startDate,
                 endDate
-            })}><i className='fas fa-check'></i></button>
+            })}><i className='fas fa-check'/></button>
         </form>
     )
 }

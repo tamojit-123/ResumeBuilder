@@ -26,7 +26,7 @@ const Personal = ({classes,  ...props}) => {
                         style={{opacity: 0}}
                         onChange={e => setImage(URL.createObjectURL(e.target.files[0]))}
                     />
-                    <label><i className="fas fa-image"></i><span></span></label>
+                    <label><i className="fas fa-image"/><span/></label>
                 </div>
                 <div className={classes.formItem} style={{flexGrow: 1}}>
                     <input 
@@ -35,7 +35,7 @@ const Personal = ({classes,  ...props}) => {
                         value={name}
                         onChange={e => setName(e.target.value)}
                     />
-                    <label><i className="fas fa-user"></i><span>Name</span></label>
+                    <label><i className="fas fa-user"/><span>Name</span></label>
                 </div>
 
             </div>
@@ -46,7 +46,7 @@ const Personal = ({classes,  ...props}) => {
                     value={dob}
                     onChange={e => setDob(e.target.value)}
                 />
-                <label><i className="fas fa-calendar-alt"></i><span>DOB</span></label>
+                <label><i className="fas fa-calendar-alt"/><span>DOB</span></label>
             </div>
             <div className={classes.formItem} style={{justifyContent: 'flex-end', padding: '.4em'}}>
                 <div style={{
@@ -67,7 +67,7 @@ const Personal = ({classes,  ...props}) => {
                         onChange={() => setGender('female')}
                     />
                 </div>
-                <label><i className="fas fa-venus-mars"></i><span>Gender</span></label>
+                <label><i className="fas fa-venus-mars"/><span>Gender</span></label>
             </div>
             
             <div className={classes.formItem}>
@@ -77,7 +77,7 @@ const Personal = ({classes,  ...props}) => {
                     value={email}
                     onChange={e => setEmail(e.target.value)}
                 />
-                <label><i className="fas fa-envelope"></i><span>Email</span></label>
+                <label><i className="fas fa-envelope"/><span>Email</span></label>
             </div>
             
             <div className={classes.formItem}>
@@ -87,7 +87,7 @@ const Personal = ({classes,  ...props}) => {
                     value={phone}
                     onChange={e => setPhone(e.target.value)}
                 />
-                <label><i className="fas fa-mobile-alt"></i><span>Phone Number</span></label>
+                <label><i className="fas fa-mobile-alt"/><span>Phone Number</span></label>
             </div>
             <button type="submit" onClick={() => props.onProgress({
                 image,
@@ -96,7 +96,7 @@ const Personal = ({classes,  ...props}) => {
                 gender,
                 email,
                 phone
-            })}><i className='fas fa-check'></i></button>
+            })}><i className='fas fa-check'/></button>
         </form>
     )
 }

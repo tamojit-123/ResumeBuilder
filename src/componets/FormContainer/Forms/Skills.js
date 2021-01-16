@@ -1,5 +1,7 @@
 import { useState } from "react";
+import {classes} from "istanbul-lib-coverage";
 
+classes.submitButton = undefined;
 const Skills = ({classes,  ...props}) => {
 
     const [newSkill, setNewSkill] = useState('');
@@ -49,7 +51,7 @@ const Skills = ({classes,  ...props}) => {
                 type="button"
                 className={classes.submitButton}
                 onClick={() => props.onProgress(skillsData)}
-            ><i className='fas fa-check'></i></button>
+            ><i className='fas fa-check'/></button>
         </form>
     );
 }

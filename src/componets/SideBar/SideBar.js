@@ -14,7 +14,7 @@ const SideBar = props => {
                 <div 
                     className={classes.hamburger}
                     onClick={() => setOpen(!open)}
-                    ><i className="fas fa-bars"></i>
+                    ><i className="fas fa-bars"/>
                 </div>
             </header>
             <Items 
